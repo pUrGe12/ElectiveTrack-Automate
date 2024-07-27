@@ -6,7 +6,7 @@ This tool allows you to automate the tedious process of figuring out which elect
 
 #### Clone this repository
 
-    git clone <thisreponame>
+    git clone https://github.com/pUrGe12/ElectiveTrack-Automate.git
 
 #### Run the script
 
