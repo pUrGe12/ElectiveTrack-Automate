@@ -89,7 +89,7 @@ then
 else
     error_exit "Failed to download Google Chrome."
 fi
-
+echo "Following requires your sudo password"
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 echo "Google Chrome installation completed successfully."
