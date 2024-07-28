@@ -46,9 +46,9 @@ def login(username, password):
 	driver.find_element(By.CSS_SELECTOR, '#submit').click() # click the submit button
 	driver.find_element(By.CSS_SELECTOR, '#load_menu_btn').click() # click the student button
 
-username = input("enter username: ")
-password = getpass.getpass("enter password: ")
-rollNumber = input("enter the girl's roll number: ")
+username = input("enter your roll number: ")
+password = getpass.getpass("enter your LDAP password: ")
+rollNumber = input('''enter your "friend's" roll number: ''')
 
 options = Options()
 options.add_argument('--headless=new')
