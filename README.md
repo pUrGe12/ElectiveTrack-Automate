@@ -17,3 +17,5 @@ This tool allows you to automate the tedious process of figuring out which elect
 
     cd scripts
     python3 script.py
+
+If you wish to change which departments it should scan through, make changes in the `department codes` list in the `main.py` file. 
