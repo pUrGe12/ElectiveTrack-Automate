@@ -10,8 +10,8 @@ This tool allows you to automate the tedious process of figuring out which elect
 
 #### Run the script
 
-    chmod +x fetchPreReq.sh
-    ./fetchPreReq.sh
+    chmod +x getPreReq.sh
+    ./getPreReq.sh
 
 #### Run the python file and wait and watch (or do something else)
 
