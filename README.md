@@ -15,4 +15,5 @@ This tool allows you to automate the tedious process of figuring out which elect
 
 #### Run the python file and wait and watch (or do something else)
 
-    python script.py
+    cd scripts
+    python3 script.py
