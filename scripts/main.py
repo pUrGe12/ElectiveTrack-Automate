@@ -1,4 +1,14 @@
-from .imports import *
+import math
+import time
+import os
+import getpass
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, StaleElementReferenceException, ElementClickInterceptedException
+
 def oddClick(i):
 	try:
 		oddElement = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, f'tr.odd:nth-child({i}) > td:nth-child(11) > a:nth-child(1)')))
