@@ -68,7 +68,7 @@ rm -rf "$TEMP_DIR"
 echo "ChromeDriver installation completed successfully."
 
 # URL of the latest Google Chrome for Linux
-CHROME_URL="https://storage.googleapis.com/chrome-for-testing-public/127.0.6533.72/linux64/chrome-linux64.zip"
+
 DESTINATION_DIR="/opt/google/chrome"
 
 TEMP_DIR=$(mktemp -d)
@@ -83,27 +83,13 @@ then
 fi
 
 echo "Downloading Google Chrome..."
-if curl -L "$CHROME_URL" -o "$TEMP_DIR/chrome.zip"
+if wget -q -O google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 then
     echo "Download complete."
 else
     error_exit "Failed to download Google Chrome."
 fi
 
-echo "Unzipping Google Chrome..."
-if unzip "$TEMP_DIR/chrome.zip" -d "$TEMP_DIR"
-then
-    echo "Unzipping complete."
-else
-    error_exit "Failed to unzip Google Chrome."
-fi
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-if sudo mv "$TEMP_DIR/chrome-linux64" "$DESTINATION_DIR"
-then
-    echo "Google Chrome moved to $DESTINATION_DIR."
-else
-    error_exit "Failed to move Google Chrome to $DESTINATION_DIR."
-fi
-
-rm -rf "$TEMP_DIR"
 echo "Google Chrome installation completed successfully."
