@@ -98,7 +98,7 @@ else
     error_exit "Failed to unzip Google Chrome."
 fi
 
-if mv "$TEMP_DIR/chrome-linux64" "$DESTINATION_DIR"
+if sudo mv "$TEMP_DIR/chrome-linux64" "$DESTINATION_DIR"
 then
     echo "Google Chrome moved to $DESTINATION_DIR."
 else
